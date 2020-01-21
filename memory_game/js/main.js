@@ -20,7 +20,7 @@ const cards = [
 	cardImage: 'images/king-of-diamonds.png'
 }
 ];
-const cardsInPlay = [];
+let cardsInPlay = [];
 
 function checkForMatch() {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
@@ -55,3 +55,9 @@ function createBoard() {
 }
 
 createBoard();
+
+function reset() {
+	cardsInPlay = [];
+	document.getElementById("game-board").innerHTML = "";
+	createBoard();
+}
