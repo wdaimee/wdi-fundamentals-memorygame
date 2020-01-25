@@ -61,3 +61,6 @@ function reset() {
 	document.getElementById("game-board").innerHTML = "";
 	createBoard();
 }
+
+const buttonClick = document.querySelector('button');
+buttonClick.addEventListener('click', reset);
